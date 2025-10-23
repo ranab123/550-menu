@@ -35,7 +35,7 @@
   border: none;
   background-color: transparent;
   font-size: 1.74rem; /* Increased by another 10% from 1.58rem */
-  font-weight: 600; /* Match meal-option.selected weight */
+  font-weight: 400; /* Normal weight, not bold */
   color: #333;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -75,6 +75,15 @@
   justify-content: center;
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: visible; /* Allow text to extend beyond container if needed */
+}
+
+.day-part {
+  font-weight: 700; /* Bold weight for day */
+  margin-right: 0.25em; /* Ensure space between day and date */
+}
+
+.date-part {
+  font-weight: 400; /* Normal weight for date */
 }
 
 /* Arrow removed */

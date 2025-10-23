@@ -10,6 +10,11 @@ function CustomDropdown({ options, value, onChange, label }) {
   // Find the label to display for the current value
   const selectedOption = options.find(opt => opt.value === value);
   const displayLabel = selectedOption ? selectedOption.label : 'Select an option';
+  
+  // Split the label into day and date parts
+  const labelParts = displayLabel.split(' ');
+  const dayPart = labelParts[0]; // e.g., "Wednesday"
+  const datePart = labelParts.slice(1).join(' '); // e.g., "10/2/2025"
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -69,7 +74,8 @@ function CustomDropdown({ options, value, onChange, label }) {
           aria-expanded={isOpen}
         >
           <span className="custom-dropdown-text">
-            {displayLabel}
+            <span className="day-part">{dayPart}</span>
+            {datePart && <span className="date-part"> {datePart}</span>}
           </span>
         </button>
 

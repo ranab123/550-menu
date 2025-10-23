@@ -2,7 +2,7 @@
 .menu-items {
   max-width: 500px;
   margin: 0 auto;
-  padding: 0 2rem 8rem 2rem; /* Increased horizontal padding from 1.5rem to 2rem */
+  padding: 0 2.75rem 8rem 2.75rem; /* Increased horizontal padding from 2.5rem to 2.75rem */
 }
 
 .menu-header {
@@ -225,7 +225,7 @@
 @media (max-width: 768px) {
   .menu-items {
     margin: 0.5rem auto;
-    padding: 0 1.75rem 6rem 1.75rem; /* Increased horizontal padding for tablet */
+    padding: 0 2.25rem 6rem 2.25rem; /* Increased horizontal padding for tablet */
   }
   
   .menu-item {
@@ -269,7 +269,7 @@
 @media (max-width: 480px) {
   .menu-items {
     margin: 0.5rem auto;
-    padding: 0 1rem 5rem 1rem; /* Reduced horizontal padding for mobile */
+    padding: 0 1.5rem 5rem 1.5rem; /* Increased horizontal padding for mobile */
   }
   
   .loading-banana {
