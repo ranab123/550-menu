@@ -1,0 +1,80 @@
+/* Custom Fonts */
+
+/* Example font face declarations - replace with your actual font files */
+
+/* 
+To add your custom fonts:
+
+1. Place your font files in the public/fonts/ directory
+2. Update the src paths below to match your font file names
+3. Update the font-family names to match your preferences
+4. Import this file in your main App.js or index.js
+
+Supported formats:
+- .woff2 (recommended - best compression)
+- .woff (good fallback)
+- .ttf (fallback)
+- .otf (fallback)
+*/
+
+/* Alte Haas Grotesk Bold for Title */
+@font-face {
+  font-family: 'AlteHaasGrotesk';
+  src: url('./fonts/AlteHaasGroteskBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; /* Improves loading performance */
+}
+
+/* Alte Haas Grotesk Regular */
+@font-face {
+  font-family: 'AlteHaasGrotesk';
+  src: url('./fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hildaquin Demo for Menu Section Titles */
+@font-face {
+  font-family: 'Hildaquin';
+  src: url('./fonts/Hildaquin Demo.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bellisia for Menu Section Titles */
+@font-face {
+  font-family: 'Bellisia';
+  src: url('./fonts/Bellisia.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 
+Example: To add more fonts, follow this pattern:
+
+@font-face {
+  font-family: 'CustomBody';
+  src: url('./fonts/your-body-font.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+Make sure to place the font files in the src/fonts/ directory.
+*/
+
+/* 
+Usage in your CSS:
+
+For the title:
+font-family: 'CustomTitle', -apple-system, BlinkMacSystemFont, sans-serif;
+
+For body text:
+font-family: 'CustomBody', -apple-system, BlinkMacSystemFont, sans-serif;
+
+Always include fallback fonts for better compatibility.
+*/

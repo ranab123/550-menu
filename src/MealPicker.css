@@ -1,0 +1,78 @@
+.meal-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem 0 0 0;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+
+.meal-selector {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 100;
+}
+
+.meal-option {
+  background: none;
+  border: none;
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: #999;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+  font-family: 'AlteHaasGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 100;
+}
+
+.meal-option:hover {
+  color: #666;
+}
+
+.meal-option.selected {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .meal-picker {
+    padding: 1.5rem 0 0 0;
+    gap: 0;
+  }
+  
+  .meal-selector {
+    gap: 2rem;
+  }
+  
+  .meal-option {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .meal-picker {
+    padding: 1rem 0 0 0;
+    gap: 0;
+  }
+  
+  .meal-selector {
+    gap: 1.5rem;
+  }
+  
+  .meal-option {
+    font-size: 1.1875rem;
+  }
+}

@@ -1,0 +1,232 @@
+
+.menu-items {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 3rem 8rem 3rem; /* Added 8rem bottom padding */
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.menu-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-family: 'AlteHaasGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.menu-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+.menu-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-category-title {
+  font-family: 'Bellisia', 'Times New Roman', serif;
+  font-size: 25rem;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  margin: 6rem 0 1.5rem 0;
+  padding: 0;
+  line-height: 0.8;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* First category title should have less top margin */
+.menu-content > *:first-child.menu-category-title {
+  margin-top: 1rem;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu-item {
+  padding: 0;
+  border: none;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 0.9; /* Tight line height for wrapped text */
+  font-family: 'AlteHaasGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  transition: color 0.2s ease;
+  display: block; /* Ensure each item is a block */
+}
+
+.menu-item:not(:first-child) {
+  padding-top: 1.8rem; /* Increased spacing between different menu items */
+}
+
+.menu-item:hover {
+  color: #000;
+}
+
+/* Loading states */
+.loading {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.loading-banana {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+/* Keeping the old spinner style for reference but not using it */
+.loading-spinner {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Error states */
+.error {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 8px;
+}
+
+.error p {
+  color: #e53e3e;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.retry-button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.retry-button:hover {
+  background: #357abd;
+}
+
+/* No menu state */
+.no-menu {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.no-menu p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.no-menu-date {
+  font-style: italic;
+  font-size: 0.9rem !important;
+  margin-top: 0.5rem !important;
+  color: #888 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .menu-items {
+    margin: 0.5rem auto;
+    padding: 0 2rem 6rem 2rem; /* Added 6rem bottom padding for tablets */
+  }
+  
+  .menu-item {
+    padding: 0;
+    font-size: 1.25rem;
+  }
+  
+  .menu-item:not(:first-child) {
+    padding-top: 1.5rem; /* Slightly less spacing on tablet */
+  }
+  
+  .menu-category-title {
+    font-size: 20rem;
+    line-height: 0.8;
+    margin: 5rem 0 1.25rem 0;
+  }
+  
+  .loading, .error, .no-menu {
+    padding: 2rem 1rem;
+  }
+  
+  .loading-banana {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-items {
+    margin: 0.5rem auto;
+    padding: 0 2.5rem 5rem 2.5rem; /* Increased left/right padding from 1.5rem to 2.5rem */
+  }
+  
+  .loading-banana {
+    width: 70px;
+  }
+  
+  .menu-item {
+    padding: 0;
+    font-size: 1.1875rem;
+  }
+  
+  .menu-item:not(:first-child) {
+    padding-top: 1.2rem; /* Less spacing on mobile */
+  }
+  
+  .menu-category-title {
+    font-size: 5rem;
+    line-height: 0.5;
+    margin: 4rem 0 1rem 0;
+  }
+}
