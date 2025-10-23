@@ -34,8 +34,8 @@
   padding: 0.75rem 0;
   border: none;
   background-color: transparent;
-  font-size: 2.25rem;
-  font-weight: 700; /* Bold weight for selected day */
+  font-size: 1.74rem; /* Increased by another 10% from 1.58rem */
+  font-weight: 600; /* Match meal-option.selected weight */
   color: #333;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -161,7 +161,7 @@
 @media (max-width: 768px) {
   .custom-dropdown-button {
     padding: 0.6rem 0;
-    font-size: 2.025rem;
+    font-size: 1.58rem; /* Increased by another 10% from 1.44rem */
   }
   
   .custom-dropdown-option {
@@ -173,7 +173,7 @@
 @media (max-width: 480px) {
   .custom-dropdown-button {
     padding: 0.5rem 0;
-    font-size: 1.65rem;
+    font-size: 1.51rem; /* Increased by another 10% from 1.37rem */
   }
   
   .custom-dropdown-menu {
