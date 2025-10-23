@@ -68,7 +68,9 @@ function CustomDropdown({ options, value, onChange, label }) {
           aria-haspopup="listbox"
           aria-expanded={isOpen}
         >
-          <span className="custom-dropdown-text">{displayLabel}</span>
+          <span className="custom-dropdown-text">
+            {displayLabel}
+          </span>
         </button>
 
         {isOpen && (

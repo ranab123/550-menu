@@ -2,7 +2,7 @@
 .menu-items {
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 3rem 8rem 3rem; /* Added 8rem bottom padding */
+  padding: 0 2rem 8rem 2rem; /* Reduced side padding */
 }
 
 .menu-header {
@@ -37,17 +37,62 @@
 }
 
 .menu-category-title {
-  font-family: 'Bellisia', 'Times New Roman', serif;
-  font-size: 25rem;
+  font-family: 'ABCStefan', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 2.25rem;
   font-weight: 400;
   color: #333;
-  text-align: center;
-  margin: 6rem 0 1.5rem 0;
-  padding: 0;
-  line-height: 0.8;
+  text-align: left;
+  margin: 4rem 0 0.5rem 0; /* Reduced from 6rem to 4rem */
+  padding: 0 0.75rem;
+  line-height: 1;
   display: block;
   position: relative;
   z-index: 1;
+  border-bottom: none;
+  padding-bottom: 0.25rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.title-with-hyphens {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.5em 0 0;
+}
+
+.title-with-hyphens::before,
+.title-with-hyphens::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  height: auto;
+  background: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title-with-hyphens::before {
+  content: '';
+  right: 100%;
+  direction: rtl;
+  text-align: right;
+  transform: translateY(-50%);
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+}
+
+.title-with-hyphens::after {
+  content: '------------------------------------------------------------------------------------';
+  left: 100%;
+  transform: translateY(-50%);
+  letter-spacing: 0.3em;
+  white-space: nowrap;
 }
 
 /* First category title should have less top margin */
@@ -57,21 +102,21 @@
 
 .menu-list {
   list-style: none;
-  padding: 0;
+  padding: 0 0.75rem;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .menu-item {
   padding: 0;
   border: none;
   font-size: 1.375rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #333;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.05em;
-  line-height: 0.9; /* Tight line height for wrapped text */
-  font-family: 'AlteHaasGrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  line-height: 1.1; /* Slightly increased line height for better readability */
+  font-family: 'ABCStefan', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   transition: color 0.2s ease;
@@ -119,7 +164,9 @@
 .loading p {
   color: #666;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-family: 'ABCStefan', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-transform: uppercase;
 }
 
 /* Error states */
@@ -190,10 +237,24 @@
     padding-top: 1.5rem; /* Slightly less spacing on tablet */
   }
   
+  .menu-list {
+    padding: 0 0.5rem;
+  }
+  
   .menu-category-title {
-    font-size: 20rem;
-    line-height: 0.8;
-    margin: 5rem 0 1.25rem 0;
+    font-size: 2.025rem;
+    line-height: 1;
+    margin: 3.5rem 0 0.5rem 0; /* Reduced from 5rem to 3.5rem */
+    padding: 0 0.5rem;
+    padding-bottom: 0.25rem;
+  }
+  
+  .title-with-hyphens {
+    padding: 0 0.4em 0 0;
+  }
+  
+  .title-with-hyphens::after {
+    letter-spacing: 0.25em;
   }
   
   .loading, .error, .no-menu {
@@ -224,9 +285,23 @@
     padding-top: 1.2rem; /* Less spacing on mobile */
   }
   
+  .menu-list {
+    padding: 0 0.25rem;
+  }
+  
   .menu-category-title {
-    font-size: 5rem;
-    line-height: 0.5;
-    margin: 4rem 0 1rem 0;
+    font-size: 1.65rem;
+    line-height: 1;
+    margin: 3rem 0 0.5rem 0; /* Reduced from 4rem to 3rem */
+    padding: 0 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  
+  .title-with-hyphens {
+    padding: 0 0.3em 0 0;
+  }
+  
+  .title-with-hyphens::after {
+    letter-spacing: 0.2em;
   }
 }

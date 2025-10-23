@@ -83,11 +83,13 @@ function MenuItems({ selectedDay, selectedMeal }) {
         {/* Mains Section */}
         {categorizedItems.mains.length > 0 && (
           <>
-            <div className="menu-category-title">mains</div>
+            <div className="menu-category-title">
+              <span className="title-with-hyphens">mains</span>
+            </div>
             <ul className="menu-list">
               {categorizedItems.mains.map((item, index) => (
                 <li key={`main-${index}`} className="menu-item">
-                  {item}
+                  {item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}
                 </li>
               ))}
             </ul>
@@ -97,11 +99,13 @@ function MenuItems({ selectedDay, selectedMeal }) {
         {/* Sides Section */}
         {categorizedItems.sides.length > 0 && (
           <>
-            <div className="menu-category-title">sides</div>
+            <div className="menu-category-title">
+              <span className="title-with-hyphens">sides</span>
+            </div>
             <ul className="menu-list">
               {categorizedItems.sides.map((item, index) => (
                 <li key={`side-${index}`} className="menu-item">
-                  {item}
+                  {item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}
                 </li>
               ))}
             </ul>
@@ -111,11 +115,13 @@ function MenuItems({ selectedDay, selectedMeal }) {
         {/* Dessert Section */}
         {categorizedItems.dessert.length > 0 && (
           <>
-            <div className="menu-category-title">dessert</div>
+            <div className="menu-category-title">
+              <span className="title-with-hyphens">dessert</span>
+            </div>
             <ul className="menu-list">
               {categorizedItems.dessert.map((item, index) => (
                 <li key={`dessert-${index}`} className="menu-item">
-                  {item}
+                  {item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}
                 </li>
               ))}
             </ul>

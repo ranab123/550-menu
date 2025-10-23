@@ -53,6 +53,15 @@ Supported formats:
   font-display: swap;
 }
 
+/* ABC Stefan Simple for menu items and titles */
+@font-face {
+  font-family: 'ABCStefan';
+  src: url('./fonts/ABCStefan-Simple-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* 
 Example: To add more fonts, follow this pattern:
 
