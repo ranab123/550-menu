@@ -3,21 +3,6 @@ import './MealPicker.css';
 import CustomDropdown from './components/CustomDropdown';
 
 function MealPicker({ onSelectionChange }) {
-  // Get current day and time for defaults
-  // Note: This is no longer used directly for setting default value
-  // but kept for reference and potential future use
-  const getCurrentDay = () => {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const currentDayIndex = new Date().getDay();
-    
-    // If it's weekend, default to Monday
-    if (currentDayIndex === 0 || currentDayIndex === 6) { // Sunday or Saturday
-      return 'Monday';
-    }
-    
-    return days[currentDayIndex];
-  };
-
   const getDefaultMeal = () => {
     const currentHour = new Date().getHours();
     return currentHour < 14 ? 'Lunch' : 'Dinner'; // 2:00 PM = 14:00

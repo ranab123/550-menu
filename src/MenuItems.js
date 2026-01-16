@@ -73,8 +73,6 @@ function MenuItems({ selectedDay, selectedMeal }) {
     );
   }
 
-  // Extract day name from the format "DayName|Date|WeekOffset"
-  const displayDay = selectedDay.includes('|') ? selectedDay.split('|')[0] : selectedDay;
   const { categorizedItems } = menuData;
 
   return (
