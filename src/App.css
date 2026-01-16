@@ -51,7 +51,7 @@
   text-align: center;
   width: 100%;
   margin: 0;
-  padding: 2rem 4rem 0 4rem;
+  padding: 2rem 2rem 0 2rem;
   line-height: 1;
 }
 
@@ -65,7 +65,6 @@
   .App-title {
     font-size: 16vw; /* Larger on tablets */
     letter-spacing: 0.03em;
-    padding: 2rem 3rem 0 3rem; /* Adjusted padding for tablets */
   }
   
   .App-title-container {
@@ -90,9 +89,6 @@
   .App-title {
     font-size: 18vw; /* Even larger on phones */
     letter-spacing: 0.02em;
-    padding: 2rem 0 0 0; /* Removed side padding for mobile */
-    margin: 0 auto; /* Center horizontally */
-    max-width: calc(100% - 2rem); /* Account for safe area */
   }
   
   .App-title-container {

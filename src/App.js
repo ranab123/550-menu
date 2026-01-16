@@ -3,6 +3,7 @@ import './App.css';
 import './fonts.css';
 import MealPicker from './MealPicker';
 import MenuItems from './MenuItems';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [selectedDay, setSelectedDay] = useState('');
@@ -30,6 +31,7 @@ function App() {
         <MealPicker onSelectionChange={handleSelectionChange} />
         <MenuItems selectedDay={selectedDay} selectedMeal={selectedMeal} />
       </header>
+      <Analytics />
     </div>
   );
 }
