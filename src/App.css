@@ -24,7 +24,8 @@
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  align-items: center;
+  overflow: visible;
 }
 
 .burger-gif-container {
@@ -49,9 +50,8 @@
   white-space: nowrap;
   color: #333;
   text-align: center;
-  width: 100%;
   margin: 0;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 0 0 0;
   line-height: 1;
 }
 
