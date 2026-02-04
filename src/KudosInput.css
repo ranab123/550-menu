@@ -108,7 +108,7 @@
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .kudos-container {
-    padding: 1.5rem 2.25rem 3rem 2.25rem;
+    padding: 3rem 2.25rem 3rem 2.25rem;
   }
 
   .kudos-title {
@@ -128,7 +128,7 @@
 
 @media (max-width: 480px) {
   .kudos-container {
-    padding: 1.25rem 1.5rem 2.5rem 1.5rem;
+    padding: 3rem 1.5rem 2.5rem 1.5rem;
   }
 
   .kudos-title {
