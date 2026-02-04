@@ -24,7 +24,7 @@ function KudosInput() {
     }
 
     try {
-      const response = await fetch(kudosUrl, {
+      await fetch(kudosUrl, {
         method: 'POST',
         mode: 'no-cors', // Apps Script requires no-cors from browser
         headers: {
